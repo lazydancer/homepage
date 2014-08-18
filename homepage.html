@@ -1,0 +1,109 @@
+<html>
+	<head>
+		<title>start</title>
+		<link rel="shortcut icon" type="image/gif" href="<!--INSERT IMG URL HERE>-->" />
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<style type="text/css">
+				body {
+			background : #ffffff;
+			background : radial-gradient(ellipse at center, #ffffff 0%, #eee 100%);
+			background : -moz-radial-gradient(#eee, #fff);
+			}
+			.keepcentered {
+			position : absolute;
+			left : 50%;
+			top : 50%;
+			width : 480px;
+			height : 300px;
+			margin-left : -240px;
+			margin-top : -150px;
+			font-weight : 100;
+			}
+			body {
+			font-family: 'Roboto', sans-serif;
+			font-style : normal;
+			color : #d64937; // Change this to change the color of the colored font on the page.
+			margin : 5px;
+			}
+			td, tr {
+			width: 20%;
+			text-align: center;
+			}
+			a {
+			font-weight: 100;
+			color : #999;
+			}
+			a:hover{
+			color: #eee;
+			}
+			a:link {
+			text-decoration : none;
+			text-shadow: 0px 0px 0px #000;
+			}
+</style>
+	</head>
+		
+	<body onload="updateClock()">
+		<div class="keepcentered">
+			<center><font size=72><div id="time"></div></font></center>
+      <p>
+        <center>
+        <table width="100%" border="0px">
+          <tr>
+            <td>Learn</td>
+            <td>Google</td>
+            <td>Coding</td>
+            <td>Listen</td>
+          </tr>
+          <tr>
+            <td><a href="http://www.duolingo.com">Duolingo</a></td>
+            <td><a href="http://www.gmail.com">Gmail</a></td>
+            <td><a href="http://www.github.com/Lazydancer">Github</a></td>
+            <td><a href="http://www.rainymood.com">Rainymood</a></td>
+          </tr>
+          <tr>
+            <td><a href="http://eloquentjavascript.net/">Javascript</a></td>
+            <td><a href="http://calendar.google.com">Calendar</a></td>
+            <td><a href="http://www.c9.io">c9.io</a></td>
+            <td><a href="http://grooveshark.com/">Grooveshark</a></td>
+          </tr>
+          <tr>
+            <td><a href="<removed>">myPlex</a></td>
+            <td><a href="http://drive.google.com">Drive</a></td>
+            <td><a href="http://www.overapi.com">OverAPI</a></td>
+            <td><a href="http://www.8tracks.com">8tracks</a></td>
+          </tr>
+        </table>
+        <br>
+        <p>Start Small</p>
+        </center>
+		  </p>
+    </div>
+    <div id="result">
+    </div>
+	</body>
+	<script>
+		function updateClock() 
+		{
+			Date.getMinutesTwoDigits = function()
+			{
+				var retval = now.getMinutes();
+				if (retval < 10) return ("0" + retval.toString());
+				else return retval.toString();
+			}
+			Date.getHoursModTwelve = function()
+			{
+				var retval = now.getHours();
+				retval = retval%12;
+				if (retval == 0) retval = 12;
+				return retval;
+			}
+			var now = new Date(),
+			time = Date.getHoursModTwelve() + ':' + Date.getMinutesTwoDigits();
+			document.getElementById('time').innerHTML = ["", time].join('');
+			setTimeout(updateClock, 1000);
+		}
+
+	</script>	
+</html>
