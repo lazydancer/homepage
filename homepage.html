@@ -39,7 +39,23 @@
 			text-decoration : none;
 			text-shadow: 0px 0px 0px #000;
 			}
+            span {
+                color: #000;
+            }
 </style>
+       <script src="mousetrap.min.js"></script> 
+       <script>
+         Mousetrap.bind('d', function() { window.location = "https://www.duolingo.com"; }); 
+         Mousetrap.bind('m', function() { window.location = "https://www.gmail.com"; }); 
+         Mousetrap.bind('t', function() { window.location = "http://www.github.com/Lazydancer"; }); 
+         Mousetrap.bind('8', function() { window.location = "http://www.8tracks.com"; }); 
+         Mousetrap.bind('j', function() { window.location = "http://eloquentjavascript.net/"; }); 
+         Mousetrap.bind('c', function() { window.location = "http://calendar.google.com"; }); 
+         Mousetrap.bind('o', function() { window.location = "http://www.overapi.com"; }); 
+         Mousetrap.bind('g', function() { window.location = "http://grooveshark.com/"; }); 
+         Mousetrap.bind('r', function() { window.location = "http://www.rainymood.com"; }); 
+       </script>
+    
 	</head>
 		
 	<body onload="updateClock()">
@@ -55,22 +71,22 @@
             <td>Listen</td>
           </tr>
           <tr>
-            <td><a href="http://www.duolingo.com">Duolingo</a></td>
-            <td><a href="http://www.gmail.com">Gmail</a></td>
-            <td><a href="http://www.github.com/Lazydancer">Github</a></td>
-            <td><a href="http://www.8tracks.com">8tracks</a></td>
+            <td><a href="http://www.duolingo.com"><span>D</span>uolingo</a></td>
+            <td><a href="http://www.gmail.com">G<span>m</span>ail</a></td>
+            <td><a href="http://www.github.com/Lazydancer">Gi<span>t</span>hub</a></td>
+            <td><a href="http://www.8tracks.com"><span>8</span>tracks</a></td>
           </tr>
           <tr>
-            <td><a href="http://eloquentjavascript.net/">Javascript</a></td>
-            <td><a href="http://calendar.google.com">Calendar</a></td>
-            <td><a href="http://www.overapi.com">OverAPI</a></td>
-            <td><a href="http://grooveshark.com/">Grooveshark</a></td>
+            <td><a href="http://eloquentjavascript.net/"><span>J</span>avascript</a></td>
+            <td><a href="http://calendar.google.com"><span>C</span>alendar</a></td>
+            <td><a href="http://www.overapi.com"><span>O</span>verAPI</a></td>
+            <td><a href="http://grooveshark.com/"><span>G</span>rooveshark</a></td>
           </tr>
           <tr>
             <td><a href="<removed>">--------</a></td>
             <td><a href="http://drive.google.com">-------</a></td>
             <td><a href="http://www.c9.io">-------</a></td>
-            <td><a href="http://www.rainymood.com">Rainymood</a></td>
+            <td><a href="http://www.rainymood.com"><span>R</span>ainymood</a></td>
           </tr>
         </table>
         </center>
